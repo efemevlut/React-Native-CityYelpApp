@@ -1,9 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 
-const RestauratItem = (props) => {
+const RestaurantItem = (props) => {
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={props.onSelect}>
             <Image 
                 style={styles.image}
                 source={{uri: props.restaurant.image_url}}
@@ -13,20 +13,19 @@ const RestauratItem = (props) => {
     )
 }
 
-export {RestauratItem};
+export {RestaurantItem};
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "bdbdbd",
-        padding: 10,
+        backgroundColor: "#bdbdbd",
         margin: 5,
-        borderRadius: 5,
+        borderRadius: 5
     },
     image: {
-        height: Dimensions.get("window").height / 3
+        height: Dimensions.get("window").height / 3,
     },
     name: {
-        fontSize: 20,
+        fontSize:20,
         fontWeight: "bold",
-    }
+    },
 })

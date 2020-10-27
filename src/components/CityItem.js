@@ -13,16 +13,11 @@ export {CityItem};
 
 const styles = StyleSheet.create({
     container: {
-        padding: 5,
-        margin: 5,
-        backgroundColor: "#95afc0",
-        borderRadius: 8,
-        alignItems: "center"
+        padding: 10,
+        alignItems: "center",
     },
     text: {
-        fontSize: 20,
-        fontWeight: "400",
-        color: "white",
+        fontSize: 18,
+        fontWeight: "500",
     }
-
 })

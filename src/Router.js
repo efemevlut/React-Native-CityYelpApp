@@ -1,19 +1,18 @@
-import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 
-const Stack = createStackNavigator();
+import {NavigationContainer} from "@react-navigation/native"
+import {createStackNavigator} from "@react-navigation/stack"
+import { CityList, RestaurantDetail, RestaurantList } from './pages';
 
-import {CityList, RestaurantDetails, RestaurantList} from "./pages"
-
+const Stack = createStackNavigator()
 
 const Router = () => {
-    return (
+    return(
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Cities" component={CityList} options={{headerShown: false}}/>
-                <Stack.Screen name="Restaurants" component={RestaurantDetails} />
-                <Stack.Screen name="Details" component={RestaurantList} />
+                <Stack.Screen name="Cities" component={CityList} options={{headerShown: false}} />
+                <Stack.Screen name="Restaurants" component={RestaurantList} />
+                <Stack.Screen name="Details" component={RestaurantDetail} />
             </Stack.Navigator>
         </NavigationContainer>
     )
