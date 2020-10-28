@@ -56,6 +56,8 @@ $ npm install react-native-reanimated react-native-gesture-handler react-native-
 
 $ npm install @react-navigation/stack
 
+$ npm install axios
+
 ## Acknowledgements
 
 
