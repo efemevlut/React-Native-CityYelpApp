@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from 'react'
-import { View, Text, StyleSheet, Image, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, Image, Dimensions, Linking, Button } from 'react-native'
 
 const RestaurantDetail = (props) => {
     const  {selectedRestaurant} = props.route.params;
@@ -21,6 +21,8 @@ const RestaurantDetail = (props) => {
             <View style={styles.infoContainer}>
                 <Text style={styles.infoText}>{selectedRestaurant.postal_code}</Text>
             </View>
+
+            <Button title="Go for reserve" onPress={() => Linking.openURL(selectedRestaurant.mobile_reserve_url)} />
         </View>
     )
 }
